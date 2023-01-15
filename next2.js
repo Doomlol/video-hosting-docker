@@ -2,7 +2,7 @@ const express = require('express');
 const fs = require('fs');
 const path = require('path');
 const app = express();
-const directory = process.cwd()+"/vide";
+const directory = process.cwd()+"/video";
 
 app.use('/videos', express.static(directory));
 app.use(express.static(__dirname+'public'))
