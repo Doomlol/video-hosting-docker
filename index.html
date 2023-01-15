@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <script>
+    function displayVideos() {
+      var xhr = new XMLHttpRequest();
+      xhr.open("GET", "directory.php", true);
+      xhr.onreadystatechange = function() {
+        if (xhr.readyState === 4 && xhr.status === 200) {
+          var videos = JSON.parse(xhr.responseText);
+          var videoContainer = document.getElementById("video-container");
+          for (var i = 0; i < videos.length; i++) {
+            var video = document.createElement("video");
+            video.src = videos[i];
+            video.controls = true;
+            videoContainer.appendChild(video);
+          }
+        }
+      }
+      xhr.send();
+    }
+  </script>
+</head>
+<body onload="displayVideos()">
+  <div id="video-container"></div>
+</body>
+</html>

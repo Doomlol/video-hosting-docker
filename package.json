@@ -1,0 +1,15 @@
+{
+  "dependencies": {
+    "express": "^4.18.2"
+  },
+  "name": "kool",
+  "version": "1.0.0",
+  "main": "next2.js",
+  "devDependencies": {},
+  "scripts": {
+    "test": "node next2.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "description": ""
+}
